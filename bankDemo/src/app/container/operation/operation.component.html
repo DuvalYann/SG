@@ -1,0 +1,37 @@
+<div class="box form-group">
+    <div class="div">
+        <h2 class="title">OPERATION</h2>
+    </div>
+
+    <div class="div">
+        <h3>Your balance : {{ balance }}</h3>
+    </div>
+
+    <div class="div">
+        <div class="div">
+            <h5>Select operation type :</h5>
+        </div>
+        <select class="select"  [(ngModel)]="selectOperation">
+            <option *ngFor="let item of operationType" [ngValue]="item.value">{{item.name}}</option>
+        </select>
+    </div>
+
+    <div class="div">
+        <div class="div">
+            <h5>Enter Amount :</h5>
+        </div>
+        <div class="div"> 
+            <input type="number"
+                   [(ngModel)]="amount"
+                   (ngModelChange)="onAmountChange()"> 
+        </div>
+    </div>
+
+    <div class="div">
+        <button class="button" title="operation" (click)="mewOperation()">Submit</button>
+    </div>
+
+    <div class="div" *ngIf="alert">
+        <p>Amount should always be greater than 0</p>
+    </div>
+</div>

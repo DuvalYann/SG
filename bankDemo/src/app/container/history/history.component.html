@@ -1,0 +1,19 @@
+
+<div class="container">
+    <div class="row-header">
+        <div class="cell-header">OPERATION</div>
+        <div class="cell-header">DATE</div>
+        <div class="cell-header">AMOUNT</div>
+        <div class="cell-header">BALANCE</div>
+    </div>
+
+    <div *ngFor="let statement of statements" class="row">
+    <div class="cell">{{statement.operation}}</div>
+    <div class="cell">{{statement.date}}</div>
+    <div class="cell">{{statement.amount}}</div>
+    <div class="cell">{{statement.balance}}</div>
+    </div>
+</div>
+
+
+ 

@@ -1,0 +1,42 @@
+.box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 20%;
+    border: 1px solid #ccc!important;
+    box-shadow: 2px 2px 5px -2px #000000;
+    border-radius: 5px;
+}
+
+.div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0px !important;
+}
+
+.div>h5 {
+    margin: 5px 0px 5px 0px ;
+}
+
+.title {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.select {
+    width: 150px;
+}
+
+.input {
+    width: 150px;
+    display: flex;
+}
+
+.button {
+    width: 150px;
+    margin: 20px;
+
+}
