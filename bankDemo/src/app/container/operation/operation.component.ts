@@ -25,12 +25,12 @@ export class OperationComponent implements OnInit {
     }
   ];
   selectOperation: Operation = Operation.DEPOSIT;
-  alert: boolean = false
+  alert: boolean = false;
 
   constructor(private bankService: BankService) { }
 
   ngOnInit(): void {
-    this.getHistory()
+    this.getHistory();
   }
 
   getHistory(): void {
@@ -57,6 +57,6 @@ export class OperationComponent implements OnInit {
   }
 
  onAmountChange() {
-    this.alert = this.amount <= 0
+    this.alert = this.amount <= 0;
  }
 }

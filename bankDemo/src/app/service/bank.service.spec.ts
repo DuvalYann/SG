@@ -35,10 +35,9 @@ describe('BankService', () => {
         done();
       },
       error: (error) => done.fail(error)
-    }
-    );
+    });
    
-    expect(httpClientSpy.get.calls.count()).withContext('one call').toBe(1)
+    expect(httpClientSpy.get.calls.count()).withContext('one call').toBe(1);
   })
 
   it('should create new operation', (done: DoneFn) => {
@@ -54,6 +53,6 @@ describe('BankService', () => {
         done();
       },
       error: (error) => done.fail(error)
-    })
-  })
+    });
+  });
 });

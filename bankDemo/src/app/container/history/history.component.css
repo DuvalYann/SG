@@ -1,36 +1,27 @@
-.row-header {
-    display: flex;
-    width: 50%;
+.cell-header {
     border: 1px solid #ccc!important;
-    border-radius: 5px;
-    margin-bottom: 6px;
-    padding: 7px;
     background-color: cornflowerblue;
 }
 
-.cell-header {
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    border-left: 1px solid #ccc!important;
-    color: white;
-}
 
 
-.row {
-    display: flex;
-    width: 50%;
+.cell {
+   
     border: 1px solid #ccc!important;
-    border-radius: 2px;
-    margin-bottom: 1px;
-    padding: 7px;
+    padding-left: 5px;
     
 }
 
-.cell {
-    display: flex;
-    justify-content: center;
-    width: 25%;
-    border-left: 1px solid #ccc!important;
-    color: rgb(0, 0, 0);
+
+
+.title {
+    width: 100%;
+}
+
+.table {
+    width: 60%;
+}
+
+.button {
+    margin-top: 10px;
 }

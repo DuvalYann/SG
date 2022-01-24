@@ -1,18 +1,30 @@
-
 <div class="container">
-    <div class="row-header">
-        <div class="cell-header">OPERATION</div>
-        <div class="cell-header">DATE</div>
-        <div class="cell-header">AMOUNT</div>
-        <div class="cell-header">BALANCE</div>
-    </div>
-
-    <div *ngFor="let statement of statements" class="row">
-    <div class="cell">{{statement.operation}}</div>
-    <div class="cell">{{statement.date}}</div>
-    <div class="cell">{{statement.amount}}</div>
-    <div class="cell">{{statement.balance}}</div>
-    </div>
+    <div class="container" #history> 
+        <div class="container">
+            <h2>Operation History</h2>
+        </div> 
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th class="cell-header">OPERATION</th>
+                        <th class="cell-header">DATE</th>
+                        <th class="cell-header">AMOUNT</th>
+                        <th class="cell-header">BALANCE</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let statement of statements">
+                        <td class="cell">{{statement.operation}}</td>
+                        <td class="cell">{{statement.date}}</td>
+                        <td class="cell">{{statement.amount}}</td>
+                        <td class="cell">{{statement.balance}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div> 
+<button class="button" (click)="downloadAsPDF()">Export</button>
 </div>
 
 

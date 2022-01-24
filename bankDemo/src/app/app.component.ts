@@ -12,6 +12,6 @@ export class AppComponent {
   constructor() {}
 
   newOperation(value: any): void {
-    this.isNewOperation = value
+    this.isNewOperation = value;
   }
 }
