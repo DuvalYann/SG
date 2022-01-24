@@ -17,24 +17,24 @@ export class BankService {
 
   constructor(private http: HttpClient) { }
 
-    getHistory(): Observable<any[]> {
-      return this.http.get<any[]>(this.url + 'statement')
-        .pipe(
-          catchError(this.handleError<any[]>('getHistory', []))
-        )
-    }
+  getHistory(): Observable<Statement[]> {
+    return this.http.get<Statement[]>(this.url + 'statement')
+      .pipe(
+        catchError(this.handleError<Statement[]>('getHistory', []))
+      );
+  }
 
-    makeOperation(statement: Statement): Observable<any> {
-      return this.http.post<Statement>(this.url + 'statement', statement, this.httpOptions)
-        .pipe(
-          catchError(this.handleError<Statement>('makeDeposit'))
-        )
-    }
+  makeOperation(statement: Statement): Observable<any> {
+    return this.http.post<Statement>(this.url + 'statement', statement, this.httpOptions)
+      .pipe(
+        catchError(this.handleError<Statement>('makeDeposit'))
+      );
+  }
 
-    private handleError<T>(operation = 'operation', result?: T) {
-      return (error: any): Observable<T> => {
-        console.error(error);
-        return of(result as T);
-      };
-    }
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      return of(result as T);
+    };
+  }
 }
